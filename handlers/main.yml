@@ -1,0 +1,8 @@
+---
+# handlers file for while_true_do.rpo_epel
+
+- name: yum-clean-metadata
+  command: yum clean metadata
+  args:
+    warn: no
+  when: wtd_rpo_epel_packages_state == "absent"

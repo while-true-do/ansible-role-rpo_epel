@@ -1,0 +1,5 @@
+---
+# tasks file for while_true_do.rpo_epel
+
+- name: Include distribution Tasks
+  include_tasks: "{{ ansible_distribution }}.yml"

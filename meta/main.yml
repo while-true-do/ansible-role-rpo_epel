@@ -1,0 +1,24 @@
+---
+# meta file for while_true_do.rpo_epel
+galaxy_info:
+  role_name: rpo_epel
+  author: while-true-do.io
+  description: An Ansible Role to install and enable EPEL repositories.
+  license: BSD
+
+  min_ansible_version: 2.7
+
+  # Supported platforms: https://galaxy.ansible.com/api/v1/platforms/
+  # Please also maintain
+  # - molecule/default/molecule.yml
+  # - molecule/default/tests/test_default.py
+  platforms:
+    - name: EL
+      versions:
+        - 7
+
+  galaxy_tags:
+    - repository
+    - testing
+
+dependencies: []
