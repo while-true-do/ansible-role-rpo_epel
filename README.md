@@ -7,16 +7,16 @@ license: BSD-3-Clause
 -->
 
 <!-- github shields -->
-![Github (tag)](https://img.shields.io/github/tag/while-true-do/ansible-role-rpo_epel.svg)
-![Github (license)](https://img.shields.io/github/license/while-true-do/ansible-role-rpo_epel.svg)
-![Github (issues)](https://img.shields.io/github/issues/while-true-do/ansible-role-rpo_epel.svg)
-![Github (pull requests)](https://img.shields.io/github/issues-pr/while-true-do/ansible-role-rpo_epel.svg)
+[![Github (tag)](https://img.shields.io/github/tag/while-true-do/ansible-role-rpo_epel.svg)](https://github.com/while-true-do/ansible-role-rpo_epel/tags)
+[![Github (license)](https://img.shields.io/github/license/while-true-do/ansible-role-rpo_epel.svg)](https://github.com/while-true-do/ansible-role-rpo_epel/blob/master/LICENSE)
+[![Github (issues)](https://img.shields.io/github/issues/while-true-do/ansible-role-rpo_epel.svg)](https://github.com/while-true-do/ansible-role-rpo_epel/issues)
+[![Github (pull requests)](https://img.shields.io/github/issues-pr/while-true-do/ansible-role-rpo_epel.svg)](https://github.com/while-true-do/ansible-role-rpo_epel/pulls)
 <!-- travis shields -->
-![Travis (com)](https://img.shields.io/travis/com/while-true-do/ansible-role-rpo_epel.svg)
+[![Travis (com)](https://img.shields.io/travis/com/while-true-do/ansible-role-rpo_epel.svg)](https://travis-ci.com/while-true-do/ansible-role-rpo_epel)
 <!-- ansible shields -->
-![Ansible (min. version)](https://img.shields.io/badge/dynamic/yaml.svg?label=Min.%20Ansible%20Version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fwhile-true-do%2Fansible-role-rpo_epel%2Fmaster%2Fmeta%2Fmain.yml&query=%24.galaxy_info.min_ansible_version&colorB=black)
-![Ansible (platforms)](https://img.shields.io/badge/dynamic/yaml.svg?label=Supported%20OS&url=https%3A%2F%2Fraw.githubusercontent.com%2Fwhile-true-do%2Fansible-role-rpo_epel%2Fmaster%2Fmeta%2Fmain.yml&query=galaxy_info.platforms%5B*%5D.name&colorB=black)
-![Ansible (tags)](https://img.shields.io/badge/dynamic/yaml.svg?label=Galaxy%20Tags&url=https%3A%2F%2Fraw.githubusercontent.com%2Fwhile-true-do%2Fansible-role-rpo_epel%2Fmaster%2Fmeta%2Fmain.yml&query=%24.galaxy_info.galaxy_tags%5B*%5D&colorB=black)
+[![Ansible (min. version)](https://img.shields.io/badge/dynamic/yaml.svg?label=Min.%20Ansible%20Version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fwhile-true-do%2Fansible-role-rpo_epel%2Fmaster%2Fmeta%2Fmain.yml&query=%24.galaxy_info.min_ansible_version&colorB=black)](https://galaxy.ansible.com/while_true_do/rpo_epel)
+[![Ansible (platforms)](https://img.shields.io/badge/dynamic/yaml.svg?label=Supported%20OS&url=https%3A%2F%2Fraw.githubusercontent.com%2Fwhile-true-do%2Fansible-role-rpo_epel%2Fmaster%2Fmeta%2Fmain.yml&query=galaxy_info.platforms%5B*%5D.name&colorB=black)](https://galaxy.ansible.com/while_true_do/rpo_epel)
+[![Ansible (tags)](https://img.shields.io/badge/dynamic/yaml.svg?label=Galaxy%20Tags&url=https%3A%2F%2Fraw.githubusercontent.com%2Fwhile-true-do%2Fansible-role-rpo_epel%2Fmaster%2Fmeta%2Fmain.yml&query=%24.galaxy_info.galaxy_tags%5B*%5D&colorB=black)](https://galaxy.ansible.com/while_true_do/rpo_epel)
 
 # Ansible Role: rpo_epel
 
