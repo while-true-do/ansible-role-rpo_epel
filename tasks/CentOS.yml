@@ -1,7 +1,7 @@
 ---
 # tasks file for while_true_do.rpo_epel
 
-- name: Install EPEL Packages
+- name: Manage EPEL Packages
   package:
     name: "{{ wtd_rpo_epel_packages }}"
     state: "{{ wtd_rpo_epel_packages_state }}"
