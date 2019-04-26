@@ -3,7 +3,7 @@
 galaxy_info:
   role_name: rpo_epel
   author: while-true-do.io
-  description: An Ansible Role to install and enable EPEL repositories.
+  description: An Ansible Role to install and enable Extra Packages for Enterprise Linux (EPEL) repositories.
   license: BSD
 
   min_ansible_version: 2.7

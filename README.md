@@ -20,8 +20,8 @@ license: BSD-3-Clause
 
 # Ansible Role: rpo_epel
 
-An Ansible Role to install and enable
-[EPEL](https://fedoraproject.org/wiki/EPEL) repositories.
+An Ansible Role to install and enable Extra Packages for Enterprise Linux 
+[(EPEL)](https://fedoraproject.org/wiki/EPEL) repositories.
 
 ## Motivation
 
