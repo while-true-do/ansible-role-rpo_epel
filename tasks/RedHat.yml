@@ -1,0 +1,35 @@
+---
+# tasks file for while_true_do.rpo_epel
+
+- name: Manage EPEL Packages
+  package:
+    name: "{{ wtd_rpo_epel_packages }}"
+    state: "{{ wtd_rpo_epel_packages_state }}"
+  become: yes
+  tags:
+    - repository
+
+- name: Manage EPEL Repository
+  ini_file:
+    path: /etc/yum.repos.d/epel.repo
+    section: epel
+    option: enabled
+    value: "{{ wtd_rpo_epel_enabled }}"
+    no_extra_spaces: yes
+  become: yes
+  when: wtd_rpo_epel_packages_state != "absent"
+  tags:
+    - repository
+
+- name: Manage EPEL Testing Repository
+  ini_file:
+    path: /etc/yum.repos.d/epel-testing.repo
+    section: epel-testing
+    option: enabled
+    value: "{{ wtd_rpo_epel_testing_enabled }}"
+    no_extra_spaces: yes
+  become: yes
+  when: wtd_rpo_epel_packages_state != "absent"
+  tags:
+    - repository
+    - testing
