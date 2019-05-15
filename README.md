@@ -20,7 +20,7 @@ license: BSD-3-Clause
 
 # Ansible Role: rpo_epel
 
-An Ansible Role to install and enable Extra Packages for Enterprise Linux 
+An Ansible Role to install and enable Extra Packages for Enterprise Linux
 [(EPEL)](https://fedoraproject.org/wiki/EPEL) repositories.
 
 ## Motivation
@@ -96,6 +96,13 @@ can be done in a
       wtd_rpo_epel_enabled: "1"
       wtd_rpo_epel_testing_enabled: "1"
 ```
+
+## Known Issues
+
+1.  RedHat Testing is currently not possible in public, due to limitations
+    in subscriptions.
+2.  Some services and features cannot be tested properly, due to limitations
+    in docker.
 
 ## Testing
 
