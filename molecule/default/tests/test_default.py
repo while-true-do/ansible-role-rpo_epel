@@ -20,7 +20,7 @@ def test_epel_file(host):
 
 
 def test_epel_testing_file(host):
-    if host.system_info.distribution == "CentOS"
+    if host.system_info.distribution == "CentOS":
         file = host.file('/etc/yum.repos.d/epel-testing.repo')
         assert file.exists
         assert file.user == 'root'
