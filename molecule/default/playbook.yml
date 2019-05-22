@@ -3,3 +3,4 @@
   hosts: all
   roles:
     - role: while_true_do.rpo_epel
+      wtd_rpo_epel_conf_testing_enabled: "1"

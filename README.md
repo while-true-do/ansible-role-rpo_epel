@@ -39,8 +39,8 @@ This role is installing and configuring EPEL.
 
 Used Modules:
 
--   [Ansible Module Package](https://docs.ansible.com/ansible/latest/modules/package_module.html)
--   [Ansible Module ini_file](https://docs.ansible.com/ansible/latest/modules/ini_file_module.html)
+-   [Ansible Package Module](https://docs.ansible.com/ansible/latest/modules/package_module.html)
+-   [Ansible ini_file Module](https://docs.ansible.com/ansible/latest/modules/ini_file_module.html)
 
 ## Installation
 
@@ -62,13 +62,15 @@ git clone https://github.com/while-true-do/ansible-role-rpo_epel.git while_true_
 ---
 # defaults file for while_true_do.rpo_epel
 
+## Package Management
 wtd_rpo_epel_packages: "epel-release"
-# State can be present, latest, absent
+# State can be present|latest|absent
 wtd_rpo_epel_packages_state: "present"
 
+## Configuration Management
 # Enable or disable installed repositories
-wtd_rpo_epel_enabled: "1"
-wtd_rpo_epel_testing_enabled: "0"
+wtd_rpo_epel_conf_enabled: "1"
+wtd_rpo_epel_conf_testing_enabled: "0"
 ```
 
 ### Example Playbook
@@ -87,14 +89,13 @@ can be done in a
     - role: while_true_do.rpo_epel
 ```
 
-#### Advanced
+#### Enable EPEL Testing
 
 ```
 - hosts: all
   roles:
     - role: while_true_do.rpo_epel
-      wtd_rpo_epel_enabled: "1"
-      wtd_rpo_epel_testing_enabled: "1"
+      wtd_rpo_epel_conf_testing_enabled: "1"
 ```
 
 ## Known Issues

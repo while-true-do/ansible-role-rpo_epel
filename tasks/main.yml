@@ -3,3 +3,8 @@
 
 - name: Include distribution Tasks
   include_tasks: "{{ ansible_distribution }}.yml"
+  tags:
+    - epel
+    - package
+    - repository
+    - system

@@ -1,10 +1,12 @@
 ---
 # defaults file for while_true_do.rpo_epel
 
+## Package Management
 wtd_rpo_epel_packages: "epel-release"
-# State can be present, latest, absent
+# State can be present|latest|absent
 wtd_rpo_epel_packages_state: "present"
 
+## Configuration Management
 # Enable or disable installed repositories
-wtd_rpo_epel_enabled: "1"
-wtd_rpo_epel_testing_enabled: "0"
+wtd_rpo_epel_conf_enabled: "1"
+wtd_rpo_epel_conf_testing_enabled: "0"
