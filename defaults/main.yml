@@ -2,9 +2,10 @@
 # defaults file for while_true_do.rpo_epel
 
 ## Package Management
-wtd_rpo_epel_packages: "epel-release"
+# Defaults are based on CentOS Linux
+wtd_rpo_epel_package: "epel-release"
 # State can be present|latest|absent
-wtd_rpo_epel_packages_state: "present"
+wtd_rpo_epel_package_state: "present"
 
 ## Configuration Management
 # Enable or disable installed repositories
