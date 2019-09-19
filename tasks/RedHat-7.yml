@@ -1,6 +1,45 @@
 ---
 # tasks file for while_true_do.rpo_epel
 
+- name: "Manage Red Hat Extras Repository"
+  rhsm_repository:
+    name: "rhel-7-server-extras-rpms"
+    state: "{{ wtd_rpo_epel_conf_rh_extras_repo_state }}"
+  when:
+    - wtd_rpo_epel_conf_rh_extras_repo_state != "unmanaged"
+  become: true
+  tags:
+    - epel
+    - package
+    - repository
+    - system
+
+- name: "Manage Red Hat Optional Repository"
+  rhsm_repository:
+    name: "rhel-7-server-optional-rpms"
+    state: "{{ wtd_rpo_epel_conf_rh_optional_repo_state }}"
+  when:
+    - wtd_rpo_epel_conf_rh_optional_repo_state != "unmanaged"
+  become: true
+  tags:
+    - epel
+    - package
+    - repository
+    - system
+
+- name: "Manage Red Hat HA Repository"
+  rhsm_repository:
+    name: "rhel-7-server-ha-rpms"
+    state: "{{ wtd_rpo_epel_conf_rh_ha_repo_state }}"
+  become: true
+  when:
+    - wtd_rpo_epel_conf_rh_ha_repo != "unmanaged"
+  tags:
+    - epel
+    - package
+    - repository
+    - system
+
 - name: Manage EPEL Packages
   yum:
     name: "{{ wtd_rpo_epel_package }}"
