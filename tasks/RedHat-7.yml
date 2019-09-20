@@ -27,19 +27,6 @@
     - repository
     - system
 
-- name: "Manage Red Hat HA Repository"
-  rhsm_repository:
-    name: "rhel-7-server-ha-rpms"
-    state: "{{ wtd_rpo_epel_conf_rh_ha_repo_state }}"
-  become: true
-  when:
-    - wtd_rpo_epel_conf_rh_ha_repo_state != "unmanaged"
-  tags:
-    - epel
-    - package
-    - repository
-    - system
-
 - name: Manage EPEL Packages
   yum:
     name: "{{ wtd_rpo_epel_package }}"

@@ -17,4 +17,3 @@ wtd_rpo_epel_conf_testing_enabled: "0"
 # State can be enabled|disabled|unmanaged
 wtd_rpo_epel_conf_rh_extras_repo_state: "enabled"
 wtd_rpo_epel_conf_rh_optional_repo_state: "enabled"
-wtd_rpo_epel_conf_rh_ha_repo_state: "enabled"
