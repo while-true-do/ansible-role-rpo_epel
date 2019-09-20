@@ -33,7 +33,7 @@
     state: "{{ wtd_rpo_epel_conf_rh_ha_repo_state }}"
   become: true
   when:
-    - wtd_rpo_epel_conf_rh_ha_repo != "unmanaged"
+    - wtd_rpo_epel_conf_rh_ha_repo_state != "unmanaged"
   tags:
     - epel
     - package
