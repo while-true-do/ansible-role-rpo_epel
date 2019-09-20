@@ -1,0 +1,4 @@
+---
+# vars file for while_true_do.rpo_epel
+
+wtd_rpo_epel_package: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"

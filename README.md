@@ -37,9 +37,13 @@ This role is installing and configuring EPEL.
 
 ## Requirements
 
+On RHEL 7 it is recommended to also enable the `optional`, `extras`, and `HA`
+repositories since EPEL packages may depend on packages from these repositories.
+The role offers an option to handle this, by default.
+
 Used Modules:
 
--   [Ansible Package Module](https://docs.ansible.com/ansible/latest/modules/package_module.html)
+-   [Ansible yum Module](https://docs.ansible.com/ansible/latest/modules/yum_module.html)
 -   [Ansible ini_file Module](https://docs.ansible.com/ansible/latest/modules/ini_file_module.html)
 
 ## Installation
@@ -63,14 +67,22 @@ git clone https://github.com/while-true-do/ansible-role-rpo_epel.git while_true_
 # defaults file for while_true_do.rpo_epel
 
 ## Package Management
-wtd_rpo_epel_packages: "epel-release"
+# Defaults are based on CentOS Linux
+wtd_rpo_epel_package: "epel-release"
 # State can be present|latest|absent
-wtd_rpo_epel_packages_state: "present"
+wtd_rpo_epel_package_state: "present"
 
 ## Configuration Management
 # Enable or disable installed repositories
 wtd_rpo_epel_conf_enabled: "1"
 wtd_rpo_epel_conf_testing_enabled: "0"
+
+# Only for Red Hat
+# Enable the recommended Red Hat Repository Subscriptions
+# State can be enabled|disabled|unmanaged
+wtd_rpo_epel_conf_rh_extras_repo_state: "enabled"
+wtd_rpo_epel_conf_rh_optional_repo_state: "enabled"
+wtd_rpo_epel_conf_rh_ha_repo_state: "enabled"
 ```
 
 ### Example Playbook

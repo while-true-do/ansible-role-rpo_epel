@@ -1,0 +1,85 @@
+---
+# tasks file for while_true_do.rpo_epel
+
+- name: "Manage Red Hat Extras Repository"
+  rhsm_repository:
+    name: "rhel-7-server-extras-rpms"
+    state: "{{ wtd_rpo_epel_conf_rh_extras_repo_state }}"
+  when:
+    - wtd_rpo_epel_conf_rh_extras_repo_state != "unmanaged"
+  become: true
+  tags:
+    - epel
+    - package
+    - repository
+    - system
+
+- name: "Manage Red Hat Optional Repository"
+  rhsm_repository:
+    name: "rhel-7-server-optional-rpms"
+    state: "{{ wtd_rpo_epel_conf_rh_optional_repo_state }}"
+  when:
+    - wtd_rpo_epel_conf_rh_optional_repo_state != "unmanaged"
+  become: true
+  tags:
+    - epel
+    - package
+    - repository
+    - system
+
+- name: "Manage Red Hat HA Repository"
+  rhsm_repository:
+    name: "rhel-7-server-ha-rpms"
+    state: "{{ wtd_rpo_epel_conf_rh_ha_repo_state }}"
+  become: true
+  when:
+    - wtd_rpo_epel_conf_rh_ha_repo != "unmanaged"
+  tags:
+    - epel
+    - package
+    - repository
+    - system
+
+- name: Manage EPEL Packages
+  yum:
+    name: "{{ wtd_rpo_epel_package }}"
+    state: "{{ wtd_rpo_epel_package_state }}"
+  become: true
+  tags:
+    - epel
+    - package
+    - repository
+    - system
+
+- name: Manage EPEL Repository
+  ini_file:
+    path: "/etc/yum.repos.d/epel.repo"
+    section: "epel"
+    option: "enabled"
+    value: "{{ wtd_rpo_epel_conf_enabled }}"
+    no_extra_spaces: true
+  become: true
+  when:
+    - wtd_rpo_epel_package_state != "absent"
+  tags:
+    - epel
+    - package
+    - repository
+    - system
+
+- name: Manage EPEL Testing Repository
+  ini_file:
+    path: "/etc/yum.repos.d/epel-testing.repo"
+    section: "epel-testing"
+    option: "enabled"
+    value: "{{ wtd_rpo_epel_conf_testing_enabled }}"
+    no_extra_spaces: true
+  become: true
+  when:
+    - wtd_rpo_epel_package_state != "absent"
+  tags:
+    - epel
+    - package
+    - repository
+    - system
+    - testing

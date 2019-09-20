@@ -1,7 +1,0 @@
----
-# tasks file for while_true_do.rpo_epel
-
-- debug:
-    msg: "Fedora does not support EPEL - skipping."
-  tags:
-    - repository
